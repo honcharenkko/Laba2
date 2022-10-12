@@ -1,0 +1,40 @@
+import math
+class STUDENT:
+    fname = None
+    sname = None
+    groop = None
+    idcard = None
+    scores = []
+    def __init__(self, fname, sname, groops, idcard, scores):
+        self.fname = fname
+        self.sname = sname
+        self.groops = groops
+        self.idcard = idcard
+        self.scores = scores
+    def ser_bal(self):
+        pass
+
+class GROOP(STUDENT):
+    groop = None
+    students = []
+    def __init__(self, groop, students):
+        self.groop = groop
+        self.students = students
+
+    def get_sceeeores(self):
+        for ele in self.students:
+            if ele == STUDENT.idcard:
+                for el in STUDENT.scores:
+                    sc = sum(self.scores)/ len(self.scores)
+                    print(self.fname, self.sname, sc)
+
+    def get_scores(self):
+        if GROOP.groop == STUDENT.groop:
+            for el in STUDENT.scores:
+                print(el)
+
+
+st1 = STUDENT("Fedor", "Popov", ["B-13"], 12, [5, 8, 10, 5, 10])
+st2 = STUDENT("Polina", "Kolomoi", ["B-13"], 32, [2, 10, 10, 5, 10])
+gr1 = GROOP("B-13", [12, 32])
+gr1.get_scores()
