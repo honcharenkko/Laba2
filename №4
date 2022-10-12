@@ -1,0 +1,28 @@
+file = open("D:\data.txt", "w")
+data1 = input("Введите текст: ")
+file.write(data1)
+file.close()
+
+amber = input("Что хотите подсчитать?\n1.Символы\n2.Слова\n3.Предложения\nВведи номер: ")
+
+if amber == "1":
+    file = open("D:\data.txt", "r")
+    data = file.read().replace(" ","")
+    number_of_characters = len(data)
+    print('Количество символов в файле:', number_of_characters)
+    file.close()
+elif amber == "2":
+    file = open("D:\data.txt", "r")
+    data = file.read()
+    number_of_words = len(data.split())
+    print('Количество слов в файле:', number_of_words)
+    file.close()
+elif amber == "3":
+    file = open("D:\data.txt", "r")
+    data = file.read()
+    number_of_sentences = len(data.split('.'))
+    number_of_sentences += len(data.split('!'))
+    number_of_sentences += len(data.split('?'))
+    number_of_sentences += len(data.split('...'))
+    print('Количество предложений в файле:', number_of_sentences - 4)
+    file.close()
