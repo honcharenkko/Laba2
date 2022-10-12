@@ -1,0 +1,12 @@
+import math
+
+class Rational:
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator
+        self.denominator = denominator
+        l = math.gcd(self.numerator, self.denominator)
+        print (self.numerator // l,"/",self.denominator // l)
+        print(str(float(self.numerator/ self.denominator)))
+
+
+clop = Rational(2, 25)
