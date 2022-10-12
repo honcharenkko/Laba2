@@ -1,0 +1,83 @@
+class Tree:
+    def __init__(self, value):
+        self.value = value
+        self.leftBox = None
+        self.rightBox = None
+
+ob1 = Tree(100)
+ob2 = Tree(75)
+ob3 = Tree(50)
+ob4 = Tree(50)
+ob5 = Tree(32.5)
+ob6 = Tree(25)
+ob7 = Tree(25)
+
+ob1.leftBox = ob2
+ob1.rightBox = ob3
+ob2.leftBox = ob4
+ob2.rightBox = ob5
+ob3.leftBox = ob6
+ob3.rightBox = ob7
+
+print("Root Node is:")
+print(ob1.value)
+
+print("left child of node is:")
+print(ob1.leftBox.value)
+
+print("right child of node is:")
+print(ob1.rightBox.value)
+
+print("Node is:")
+print(ob2.value)
+
+print("left child of node is:")
+print(ob2.leftBox.value)
+
+print("right child of node is:")
+print(ob2.rightBox.value)
+
+print("Node is:")
+print(ob3.value)
+
+print("left child of node is:")
+print(ob3.leftBox.value)
+
+print("right child of node is:")
+print(ob3.rightBox.value)
+
+print("Node is:")
+print(ob4.value)
+
+print("left child of node is:")
+print(ob4.leftBox)
+
+print("right child of node is:")
+print(ob4.rightBox)
+
+print("Node is:")
+print(ob5.value)
+
+print("left child of node is:")
+print(ob5.leftBox)
+
+print("right child of node is:")
+print(ob5.rightBox)
+
+print("Node is:")
+print(ob6.value)
+
+print("left child of node is:")
+print(ob6.leftBox)
+
+print("right child of node is:")
+print(ob6.rightBox)
+
+print("Node is:")
+print(ob7.value)
+
+print("left child of node is:")
+print(ob7.leftBox)
+
+print("right child of node is:")
+print(ob7.rightBox)
