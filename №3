@@ -1,0 +1,30 @@
+class Order:
+    idcode = None
+    name = None
+    prise = None
+    name = None
+    surname = None
+    addres = None
+    def get_Order(self, x, y):
+        print(x+ y)
+
+class Shop(Order):
+    def __init__(self, name, prise):
+        self.name = name
+        self.prise = prise
+class Customers(Order):
+    def __init__(self, firstname, surname, addres):
+        self.firstname = firstname
+        self.surname = surname
+        self.addres = addres
+
+
+man1 = Customers("Viktor", "Podguboi", "Obolonska-32")
+man2 = Customers("Olga", "Poguzna", "Robelovska-12")
+
+th1 = Shop("Xbox", 5000)
+th2 = Shop("Iphone 11", 18000)
+th3 = Shop("Glas", 300)
+
+ord1 = Order()
+ord1.get_Order(th1, th2)
