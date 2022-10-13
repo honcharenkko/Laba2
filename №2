@@ -4,9 +4,15 @@ class Rational:
     def __init__(self, numerator, denominator):
         self.numerator = numerator
         self.denominator = denominator
+    def drob(self):
         l = math.gcd(self.numerator, self.denominator)
-        print (self.numerator // l,"/",self.denominator // l)
-        print(str(float(self.numerator/ self.denominator)))
-
-
-clop = Rational(2, 25)
+        numerator_res = self.numerator // l
+        denominator_res = self.denominator // l
+        drob_res = str(numerator_res) + "/" + str(denominator_res)
+        return(drob_res)
+    def desiatkova(self):
+        desiatkova_res = str(float(self.numerator/ self.denominator))
+        return(desiatkova_res)
+clop = Rational(100, 25)
+print(clop.drob())
+print(clop.desiatkova())
