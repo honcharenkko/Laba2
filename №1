@@ -1,6 +1,7 @@
 class Rectangle:
-    length = 1
-    width = 1
+    def __init__(self):
+        self.length = 1
+        self.width = 1
     def set_data(self, length, width):
            if (length or width) < 0:
                self.length = length = 0
@@ -17,18 +18,25 @@ class Rectangle:
     def get_data(self):
         print("Довжина: ", float(self.length),"Ширина: ", float(self.width))
     def perimeter(self):
-        print("Периметр: ", float(2 * self.length + 2 * self.width))
+        perimeter_res = float(2 * self.length + 2 * self.width)
+        return("Периметр: ", perimeter_res)
     def square(self):
-        print("Площа: ", float(self.length * self.width))
+        square_res = float(self.length * self.width)
+        return("Площа:", square_res)
 
 one = Rectangle()
 one.set_data(-2, 1)
 one.get_data()
-one.perimeter()
-one.square()
+print(one.perimeter())
+print(one.square())
 
 two = Rectangle()
-two.set_data(14.7, 3)
+two.set_data(14.5, 3)
 two.get_data()
-two.perimeter()
-two.square()
+print(two.perimeter())
+print(two.square())
+
+drei = Rectangle()
+drei.get_data()
+print(drei.perimeter())
+print(drei.square())
